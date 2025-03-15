@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeRecetas.API", "GestionDeRecetas.API\GestionDeRecetas.API.csproj", "{EE525B04-3D94-4E00-9013-847F0385D6EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{882B396A-1381-4403-8E5A-307963D5C3CA} = {882B396A-1381-4403-8E5A-307963D5C3CA}
+		{D9F37C23-86EB-4BFD-8514-019B098FD1AE} = {D9F37C23-86EB-4BFD-8514-019B098FD1AE}
+		{DF1D99AC-766A-486E-BA09-759568AFB499} = {DF1D99AC-766A-486E-BA09-759568AFB499}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeRecetas.BC", "GestionDeRecetas.BC\GestionDeRecetas.BC.csproj", "{DF1D99AC-766A-486E-BA09-759568AFB499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeRecetas.BW", "GestionDeRecetas.BW\GestionDeRecetas.BW.csproj", "{882B396A-1381-4403-8E5A-307963D5C3CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF1D99AC-766A-486E-BA09-759568AFB499} = {DF1D99AC-766A-486E-BA09-759568AFB499}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeRecetas.DA", "GestionDeRecetas.DA\GestionDeRecetas.DA.csproj", "{D9F37C23-86EB-4BFD-8514-019B098FD1AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{882B396A-1381-4403-8E5A-307963D5C3CA} = {882B396A-1381-4403-8E5A-307963D5C3CA}
+		{DF1D99AC-766A-486E-BA09-759568AFB499} = {DF1D99AC-766A-486E-BA09-759568AFB499}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE525B04-3D94-4E00-9013-847F0385D6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE525B04-3D94-4E00-9013-847F0385D6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE525B04-3D94-4E00-9013-847F0385D6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE525B04-3D94-4E00-9013-847F0385D6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1D99AC-766A-486E-BA09-759568AFB499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1D99AC-766A-486E-BA09-759568AFB499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1D99AC-766A-486E-BA09-759568AFB499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1D99AC-766A-486E-BA09-759568AFB499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882B396A-1381-4403-8E5A-307963D5C3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882B396A-1381-4403-8E5A-307963D5C3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882B396A-1381-4403-8E5A-307963D5C3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882B396A-1381-4403-8E5A-307963D5C3CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F37C23-86EB-4BFD-8514-019B098FD1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F37C23-86EB-4BFD-8514-019B098FD1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F37C23-86EB-4BFD-8514-019B098FD1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F37C23-86EB-4BFD-8514-019B098FD1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38BEDE33-DB66-498E-814E-796CA385A90D}
+	EndGlobalSection
+EndGlobal
