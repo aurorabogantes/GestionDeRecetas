@@ -37,6 +37,6 @@ namespace GestionDeRecetas.DA.Entidades
 
         public string ImagenURL { get; set; }
 
-        public virtual ICollection<RecetaIngredienteDA> RecetaIngredientes { get; set; }
+        //public virtual ICollection<RecetaIngredienteDA> RecetaIngredientes { get; set; }
     }
 }

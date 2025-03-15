@@ -31,7 +31,5 @@ namespace GestionDeRecetas.DA.Entidades
         [Required]
         public decimal Costo { get; set; }
 
-        public virtual ICollection<RecetaIngredienteDA> RecetaIngredientes { get; set; }
-
     }
 }

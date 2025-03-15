@@ -5,6 +5,7 @@ using GestionDeRecetas.DA.Acciones;
 using GestionDeRecetas.DA.Config;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using AppContext = GestionDeRecetas.DA.Config.AppContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,10 +27,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<GestionDeRecetaContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddDbContext<GestionDeIngredienteContext>(options =>
+builder.Services.AddDbContext<AppContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddTransient<IGestionarRecetasBW, GestionarRecetaBW>();

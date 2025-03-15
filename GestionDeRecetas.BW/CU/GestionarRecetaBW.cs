@@ -13,21 +13,6 @@ namespace GestionDeRecetas.BW.CU
             this._gestionarRecetasDA = _gestionarRecetasDA;
         }
 
-        public async Task<bool> ActualizarIngredienteReceta(int recetaId, int ingredienteId, RecetaIngrediente dto)
-        {
-            if(!ReglasDeReceta.elIdEsValido(recetaId) || !ReglasDeIngrediente.elIdEsValido(ingredienteId))
-            {
-                return false;
-            }
-
-            if(dto.Cantidad <= 0)
-            {
-                return false;
-            }
-
-            return await _gestionarRecetasDA.ActualizarIngredienteReceta(recetaId, ingredienteId, dto);
-        }
-
         public Task<bool> actualizarReceta(int id, Receta receta)
         {
             if (!ReglasDeReceta.elIdEsValido(id) || !ReglasDeReceta.laRecetaEsValida(receta))
@@ -35,31 +20,6 @@ namespace GestionDeRecetas.BW.CU
                 return Task.FromResult(false);
             }
             return _gestionarRecetasDA.actualizarReceta(id, receta);
-        }
-
-        public async Task<bool> AregarIngredienteReceta(int recetaId, RecetaIngrediente dto)
-        {
-            if(!ReglasDeReceta.elIdEsValido(recetaId))
-            {
-                return false;
-            }
-
-            if(dto.Cantidad <= 0)
-            {
-                return false;
-            }
-
-            return await _gestionarRecetasDA.AregarIngredienteReceta(recetaId, dto);
-        }
-
-        public async Task<bool> EliminarIngredienteReceta(int recetaId, int ingredienteId)
-        {
-            if(!ReglasDeReceta.elIdEsValido(recetaId) || !ReglasDeIngrediente.elIdEsValido(ingredienteId))
-            {
-                return false;
-            }
-
-            return await _gestionarRecetasDA.EliminarIngredienteReceta(recetaId, ingredienteId);
         }
 
         public Task<bool> eliminarReceta(int id)
